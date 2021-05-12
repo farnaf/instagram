@@ -24,7 +24,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let post = PFObject(className: "Posts")
         
         post["caption"] = commentField.text!
-        post["autho"] = PFUser.current()!
+        post["author"] = PFUser.current()!
         
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(name: "image.png", data: imageData!)
